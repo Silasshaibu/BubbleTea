@@ -1,0 +1,20 @@
+BustBerries-HexColors
+#f2dee0
+#b40425
+#e99f9b
+#bf4850
+#70131c
+
+Watermelon -HexColors
+#548A32
+#A20D1F
+#FBFDF6
+#5F963A
+#689F40
+
+Tropical - HexColors
+#F6AE32
+#D17736
+#8E6B39
+#FDB922
+#F0882E

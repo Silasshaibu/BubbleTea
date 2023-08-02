@@ -1,0 +1,406 @@
+:root {
+  --textColorType1: white;
+  --productCageScale: 10vw;
+  --spinnerNodeRadius: 5rem;
+  --wheelRadius: 22vw;
+  --eqSpacingSpreadOut: 150%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.icons-family {
+  stroke: white;
+  width: 1rem;
+  margin: 1rem;
+  align-self: flex-start;
+}
+
+body {
+  padding: 2% 4%;
+  position: relative;
+  background-color: orange;
+  font-family: 'poppins', 'product-sans', sans-serif, 'montserrat', system-ui,
+    'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  justify-content: space-between;
+}
+
+header nav {
+  display: flex;
+}
+
+.navMenuSection {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+}
+
+.navMenuSection li {
+  padding: 0.5rem 1rem;
+  height: 50px;
+  align-items: center;
+  display: grid;
+}
+
+li {
+  list-style: none;
+}
+
+li.desktopMenu.button {
+  border: 3px solid white;
+  border-radius: 0.3rem;
+}
+
+.productInfoSec h1 {
+  font-size: 4rem;
+  color: var(--textColorType1);
+  line-height: 4rem;
+  width: 15ch;
+}
+
+.productInfoSec h1 span {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+p {
+  padding-top: 1rem;
+  color: var(--textColorType1);
+  font-weight: 200;
+}
+
+.logoSection {
+  max-width: 20%;
+  transform: scale(1);
+  padding: 0.2rem;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+}
+
+.mobilemenuHamburgerSection {
+  display: none;
+}
+
+/* ARTICLE SECTION */
+
+p.icreamTextContent {
+  padding-bottom: 2rem;
+}
+
+.productPrevSec {
+  position: relative;
+}
+
+body {
+  min-height: 100vh;
+  padding-bottom: 0;
+  width: 100vw;
+  max-width: 100vw;
+  position: relative;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.left {
+  float: left;
+  display: flex;
+  width: 50%;
+  position: relative;
+  min-width: 360px;
+}
+
+.left-highlighter {
+  min-height: 0.3rem;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 25%; /*100% divided by the list of items*/
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.767);
+  transform: translateX('0');
+  transition: transform 400ms ease-in-out;
+}
+
+.holder {
+  min-width: 1000px;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.right {
+  float: right;
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1/1;
+}
+
+.wheel {
+  transform: rotate(45deg);
+  /*onLoadHow It Should be*/
+  background-color: rgba(255, 255, 255, 0.397);
+  width: var(--wheelRadius);
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.spinnerNodeCentered {
+  width: var(--spinnerNodeRadius);
+  aspect-ratio: 1/1;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 300ms;
+}
+
+.prodImgs {
+  position: absolute;
+  display: grid;
+  place-items: center;
+}
+
+.prodImgs img {
+  transform: scale(1.5); /*Scale ProductImagein Viewer based on Device*/
+}
+
+.spinnerNodeCentered div:nth-child(1) {
+  bottom: var(--eqSpacingSpreadOut); /*same*/
+  left: 50%;
+  transform: translate(-50%);
+  width: var(--productCageScale);
+  aspect-ratio: 1/1;
+}
+
+.spinnerNodeCentered div:nth-child(2) {
+  left: var(--eqSpacingSpreadOut); /*same*/
+  bottom: 50%;
+  transform: translate(0%, 50%) rotate(90deg);
+  width: var(--productCageScale);
+  aspect-ratio: 1/1;
+}
+
+.spinnerNodeCentered div:nth-child(3) {
+  top: var(--eqSpacingSpreadOut); /*same*/
+  left: 50%;
+  transform: translate(-50%) rotate(180deg);
+  width: var(--productCageScale);
+  aspect-ratio: 1/1;
+}
+
+.spinnerNodeCentered div:nth-child(4) {
+  right: var(--eqSpacingSpreadOut); /*same*/
+  bottom: 50%;
+  transform: translate(0%, 50%) rotate(-90deg);
+  width: var(--productCageScale);
+  aspect-ratio: 1/1;
+}
+
+.productInfoSec {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5% 0px;
+  padding-top: 2%;
+  min-height: 100px;
+  position: absolute;
+  justify-content: space-between;
+  bottom: 0%;
+  /* left: 5%; */
+  z-index: 1;
+}
+
+.productInfoSec .textSection {
+  padding-right: 10%;
+}
+
+.bodyClinger-productViewSection {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 80%;
+  aspect-ratio: 1/1;
+  overflow: hidden; /*Hide the other 3rd quarters of the inactive icecreams*/
+}
+
+.productViewerTranslationHolder {
+  aspect-ratio: 1/1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: grid;
+  width: 100%;
+  place-items: center;
+  transform: translate(50%, 50%) scale(2);
+}
+
+img.fruitImage {
+  position: absolute;
+  top: -50%;
+  transform: translateY(50%) scale(2);
+  z-index: -1;
+  opacity: 0.2;
+  background-blend-mode: multiply;
+}
+
+/*ANIMATION SETTINGS FOR CHANGE OF INFO ON CLICK ON DIFFERENT ITEM*/
+.textSection h1 {
+  color: white;
+  opacity: 0.5;
+  transition: all 300ms ease-in;
+}
+
+.textSection {
+  display: none;
+  transform: translateY(40px);
+  transition: transform 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.textSection.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.textSection h1.active {
+  color: white;
+  opacity: 1;
+}
+
+p.icreamTextContent {
+  color: white;
+  opacity: 0.5;
+  transform: translateY(20px);
+  transition: all 300ms ease-in;
+}
+
+p.icreamTextContent.active {
+  color: white;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/*ANOTHER TRANSTION TO DO IS THE UNDERLINE STYLE SLIDING FROM LEFT TO RIGHT OF THE list position*/
+
+@media (max-width: 1024px) {
+  :root {
+    --textColorType1: white;
+    --productCageScale: 10vw;
+    --spinnerNodeRadius: 5rem;
+    --wheelRadius: 35vw;
+    --eqSpacingSpreadOut: 200%;
+  }
+
+  .productInfoSec h1 {
+    font-size: 3.5rem;
+    padding: 0;
+    color: var(--textColorType1);
+    margin: 0;
+    line-height: 3.4rem;
+    width: 15ch;
+  }
+
+  .productInfoSec h1 span {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  p {
+    padding-top: 1rem;
+    color: var(--textColorType1);
+    font-weight: 200;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --textColorType1: white;
+    --productCageScale: 10vw;
+    --spinnerNodeRadius: 5rem;
+    --wheelRadius: 35vw;
+    --eqSpacingSpreadOut: 150%;
+  }
+
+  #harmburgerBtn {
+    cursor: pointer;
+    width: 3rem;
+  }
+
+  .left {
+    width: 80%;
+    min-width: 50px;
+  }
+
+  .productInfoSec {
+    position: relative;
+    width: 100%;
+  }
+
+  .productInfoSec {
+    position: absolute;
+    /* background-color: red; */
+  }
+
+  .wheel {
+    transform: rotate(45deg);
+    background-color: transparent;
+  }
+
+  .bodyClinger-productViewSection {
+    position: absolute;
+    left: 50%;
+    bottom: 50vh;
+    transform: translateX(-50%) rotate(45deg);
+    width: 100%;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .productInfoSec h1 {
+    font-size: 3rem;
+    padding: 0;
+    color: var(--textColorType1);
+    margin: 0;
+    line-height: 2.8rem;
+    width: 100%;
+  }
+
+  .prodImgs img {
+    transform: scale(1);
+  }
+
+  .mobilemenuHamburgerSection {
+    display: block;
+    min-height: 10px;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    color: white;
+  }
+
+  .navMenuSection {
+    display: none;
+  }
+}
